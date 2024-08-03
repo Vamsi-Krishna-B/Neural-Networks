@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIFAR-10 Image Classifier</title>
+    <style>
+        body {
+            overflow-y: auto; /* Enable vertical scrolling */
+            height: 100vh;    /* Make the body take full viewport height */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+            background-image: url('background.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .form-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-container input[type="file"] {
+            display: block;
+            margin: 0 auto 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Leaf Disease Detection</h1>
+        <h2>Model was Trained on following set of Leaves</h2>
+        <h3>
+            1 - 'Apple___Apple_scab'<br>
+            2 - 'Apple___Black_rot'<br>
+            3 - 'Apple___Cedar_apple_rust'<br>
+            4 - 'Apple___healthy'<br>
+            5 - 'Blueberry___healthy'<br>
+            6 - 'Cherry_(including_sour)___Powdery_mildew'<br>
+            7 - 'Cherry_(including_sour)___healthy'<br>
+            8 - 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot'<br>
+            9 - 'Corn_(maize)___Common_rust'<br>
+            10 - 'Corn_(maize)___Northern_Leaf_Blight'<br>
+            11 - 'Corn_(maize)___healthy'<br>
+            12 - 'Grape___Black_rot'<br>
+            13 - 'Grape___Esca_(Black_Measles)'<br>
+            14 - 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)'<br>
+            15 - 'Grape___healthy'<br>
+            16 - 'Orange___Haunglongbing_(Citrus_greening)'<br>
+            17 - 'Peach___Bacterial_spot'<br>
+            18 - 'Peach___healthy'<br>
+            19 - 'Pepper,_bell___Bacterial_spot'<br>
+            20 - 'Pepper,_bell___healthy'<br>
+            21 - 'Potato___Early_blight'<br>
+            22 - 'Potato___Late_blight'<br>
+            23 - 'Potato___healthy'<br>
+            24 - 'Raspberry___healthy'<br>
+            25 - 'Soybean___healthy'<br>
+            26 - 'Squash___Powdery_mildew'<br>
+            27 - 'Strawberry___Leaf_scorch'<br>
+            28 - 'Strawberry___healthy'<br>
+            29 - 'Tomato___Bacterial_spot'<br>
+            30 - 'Tomato___Early_blight'<br>
+            31 - 'Tomato___Late_blight'<br>
+            32 - 'Tomato___Leaf_Mold'<br>
+            33 - 'Tomato___Septoria_leaf_spot'<br>
+            34 - 'Tomato___Spider_mites Two-spotted_spider_mite'<br>
+            35 - 'Tomato___Target_Spot'<br>
+            36 - 'Tomato___Tomato_Yellow_Leaf_Curl_Virus'<br>
+            37 - 'Tomato___Tomato_mosaic_virus'<br>
+            38 - 'Tomato___healthy'
+        </h3>
+        <div class="form-container">
+            <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required>
+                <button type="submit">Upload Image</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

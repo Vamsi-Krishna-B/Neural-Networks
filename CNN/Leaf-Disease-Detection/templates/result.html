@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+    <style>
+        body {
+            overflow-y: auto; /* Enable vertical scrolling */
+            height: 100vh;    /* Make the body take full viewport height */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+            background-image: url('background.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .back-link a:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Classification Result</h1>
+        <p>The predicted class is: {{ predicted_class }}</p>
+        <div class="back-link">
+            <a href="/">Back to Upload</a>
+        </div>
+    </div>
+</body>
+</html>
